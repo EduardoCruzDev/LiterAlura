@@ -27,6 +27,5 @@ public interface LibroRepository extends JpaRepository<DatosLibro, Long> {
     @Query("SELECT a FROM DatosAuthor a WHERE a.nombre = :nombre")
     List<DatosAuthor> findAuthorByName(String nombre);
 
-    @Query("SELECT a FROM DatosAuthor a WHERE a.anoFallecimiento = :deathYear")
-    List<DatosAuthor> findAuthorByDeathYear(int deathYear);
+
 }

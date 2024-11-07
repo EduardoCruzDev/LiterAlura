@@ -111,7 +111,7 @@ public class LibroService {
         // Solicitar el año de fallecimiento desde la consola
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese un año para consultar los autores vivos: ");
-        int deathYear = scanner.nextInt();  // Capturamos el año como un entero
+        int deathActual = scanner.nextInt();  // Capturamos el año como un entero
 
 
         // Obtener todos los autores
@@ -120,7 +120,7 @@ public class LibroService {
         // Filtrar autores cuyo año de fallecimiento coincida con el ingresado
         List<DatosAuthor> filteredAuthors = new ArrayList<>();
         for (DatosAuthor author : datosAuthors) {
-            if (author.getAnoFallecimiento() != null && author.getAnoFallecimiento() >= deathYear) {
+            if (author.getAnoFallecimiento() != null && author.getAnoFallecimiento() >= deathActual && author.getAnoNacimiento()<= deathActual) {
                 filteredAuthors.add(author);
             }
         }

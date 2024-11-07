@@ -1,5 +1,8 @@
 package com.eduardocruzdev.literalura.model;
 
+import lombok.Getter;
+
+@Getter
 public enum Lenguajes {
     ESPANOL("Español", "es"),
     INGLES("Inglés", "en"),
@@ -39,6 +42,7 @@ public enum Lenguajes {
     CANTONES("Cantonés", "yue"),
     INDONESIO("Indonesio", "id");
 
+    // Métodos para acceder a los valores del enum
     private final String nombre;
     private final String acronimo;
 
@@ -46,15 +50,6 @@ public enum Lenguajes {
     Lenguajes(String nombre, String acronimo) {
         this.nombre = nombre;
         this.acronimo = acronimo;
-    }
-
-    // Métodos para acceder a los valores del enum
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getAcronimo() {
-        return acronimo;
     }
 
     @Override
